@@ -21,7 +21,7 @@ const requestListener = function (req, res) {
     console.log(JSON.stringify(res.getHeaders()));
 }
 
-const server = http.createServer(requestListener).listen(port, '127.0.01', () => {
+const server = http.createServer(requestListener).listen(port, '127.0.0.1', () => {
     lightship.signalReady();
     console.log(`Node.js web server at port ${port} is running..`);
 })
